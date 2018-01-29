@@ -40,7 +40,7 @@ describe('GeocodeService', () => {
           url;
 
       address = 'golden colorado';
-      url = 'http://geocode.arcgis.com/arcgis/rest/services/' +
+      url = 'https://geocode.arcgis.com/arcgis/rest/services/' +
           'World/GeocodeServer/find?f=json&text=golden colorado';
 
       expect(geocodeService.buildUrl(address)).toEqual(url);

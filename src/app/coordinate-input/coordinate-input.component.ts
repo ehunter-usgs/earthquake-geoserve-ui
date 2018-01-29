@@ -17,7 +17,7 @@ export class CoordinateInputComponent implements OnInit {
   ngOnInit () {
   }
 
-  handleClick (latitude: string, longitude: string) {
+  handleSubmit (latitude: string, longitude: string) {
     let confidence,
         zoom;
 

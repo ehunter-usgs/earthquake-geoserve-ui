@@ -6,17 +6,16 @@
 </div>
 
 <ng-template #search>
-  <mat-form-field class="full-width">
-    <input matInput
-        #address
-        placeholder="Address"/>
-  </mat-form-field>
-  <button mat-raised-button
-      color="primary"
-      (click)="doGeocode(address.value)">
-    Search
-  </button>
-
+  <form (submit)="$event.preventDefault(); doGeocode(address.value)">
+    <mat-form-field class="full-width">
+      <input matInput
+          #address
+          placeholder="Address"/>
+    </mat-form-field>
+    <button mat-raised-button color="primary">
+      Search
+    </button>
+  </form>
   <div *ngIf="geocodeService.error | async; let text">
     <p color="warn">
       {{ text }}

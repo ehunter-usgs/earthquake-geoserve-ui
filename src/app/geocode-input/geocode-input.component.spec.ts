@@ -112,7 +112,7 @@ describe('GeocodeInputComponent', () => {
 
       address = 'test';
 
-      // call handleClick
+      // call handleSubmit
       component.doGeocode(address);
 
       // expects
@@ -142,7 +142,7 @@ describe('GeocodeInputComponent', () => {
         name: 'Golden, Colorado'
       };
 
-      // call handleClick
+      // call handleSubmit
       component.setCoordinates(geocodeLocation);
 
       // confidence computed from extents

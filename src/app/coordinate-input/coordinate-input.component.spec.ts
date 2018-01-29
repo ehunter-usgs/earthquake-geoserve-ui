@@ -81,7 +81,7 @@ describe('CoordinateInputComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  describe('handleClick', () => {
+  describe('handleSubmit', () => {
     it('should handle click', () => {
       let latitude,
           longitude;
@@ -90,8 +90,8 @@ describe('CoordinateInputComponent', () => {
       latitude = coordinates.latitude.toString();
       longitude = coordinates.longitude.toString();
 
-      // call handleClick
-      component.handleClick(latitude, longitude);
+      // call handleSubmit
+      component.handleSubmit(latitude, longitude);
 
       // expects
       expect(coordinatesService.setCoordinates).toHaveBeenCalled();
